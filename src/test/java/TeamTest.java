@@ -1,3 +1,5 @@
+import model.Student;
+import model.Team;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -5,7 +7,7 @@ public class TeamTest {
 
     @Test
     void testAddAndGetStudents() {
-        Team team = new Team("A-Team", "101");
+        Team team = new Team("A-model.Team", "101");
         Student s1 = new Student("Bob", true);
         Student s2 = new Student("Alice", true);
 
@@ -21,7 +23,7 @@ public class TeamTest {
 
     @Test
     void testRemoveStudent() {
-        Team team = new Team("A-Team", "101");
+        Team team = new Team("A-model.Team", "101");
         Student s1 = new Student("Alice", true);
         Student s2 = new Student("Bob", true);
 
@@ -36,7 +38,7 @@ public class TeamTest {
 
     @Test
     void testRemoveNonExistingStudent() {
-        Team team = new Team("A-Team", "101");
+        Team team = new Team("A-model.Team", "101");
         team.addStudent(new Student("Alice",  true));
         team.removeStudent("Charlie");
 
