@@ -1,3 +1,6 @@
+import model.Student;
+import model.Team;
+
 import java.util.Arrays;
 
 public class Main {
