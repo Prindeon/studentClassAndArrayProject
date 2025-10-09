@@ -1,3 +1,5 @@
+package model;
+
 public class Student {
     private String name;
     private boolean active;
@@ -46,5 +48,17 @@ public class Student {
     @Override
     public String toString() {
         return name;
+    }
+
+    public int getHighestGrade() {
+        int topGrade = 0;
+        if (grades != null) {
+           for (int grade : grades) {
+                if  (grade > topGrade) {
+                    topGrade = grade;
+                }
+            }
+        }
+        return topGrade;
     }
 }
