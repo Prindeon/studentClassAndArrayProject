@@ -1,3 +1,5 @@
+package model;
+
 public class Team {
     String name;
     String room;
@@ -45,7 +47,7 @@ public class Team {
         return students.length;
     }
 
-    // Udvid klassen Team med en metode, der returnerer et array med alle de studerende, der er
+    // Udvid klassen model.Team med en metode, der returnerer et array med alle de studerende, der er
     // tilknyttet teamet (arrayet må ikke indeholde null). (Arrays klassen må ikke bruges!)
     public Student[] getStudents() {
         Student[] result;
@@ -63,7 +65,7 @@ public class Team {
             }
             result = new Student[count];
 
-            // indsætter Student objekerne i det nye array
+            // indsætter model.Student objekerne i det nye array
             int index = 0;
             for (Student student : students) {
                 if (student != null) {
@@ -77,7 +79,6 @@ public class Team {
 
     public void removeStudent(String name) {
         Student[] newStudents;
-
 
         // sæt størrelse på nye array
         if (students == null) {
